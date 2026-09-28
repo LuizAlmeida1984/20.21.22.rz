@@ -1,0 +1,35 @@
+﻿@page "/cadastrarproduto"
+
+@using brrz.Models
+
+<Titulo Texto="Cadastro de Produto"></Titulo> 
+
+
+@produto.Nome 
+<br/>
+@produto.Preco
+<br/>
+@produto.Quantidade 
+<br/>
+@produto.ValorEstoqueTotal()
+<br/>
+
+<button @onclick="ColocaDados" class="btn btn-primary">
+        Colocar Dados
+    </button>
+    
+@code {
+
+    
+
+    Produto produto = new Produto();
+
+    private void ColocaDados()
+    {
+        produto.Nome = "Caneta";
+        produto.Preco = 10;
+        produto.Quantidade = 7;
+    }
+
+
+}
